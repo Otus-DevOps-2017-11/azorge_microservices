@@ -1,6 +1,11 @@
 # azorge_microservices
+#### Homework 17:
+Работа с `networks` и `docker-compose`.
+
+Параметризация `docker-compose` через `.env` и создание `docker-compose.override.yml`
+
 #### Homework 16:
-Все предыдушее перенес в `docker-monolith`.
+Все предыдущее перенес в `docker-monolith`.
 
 *. Cборка ui началась не с первого шага потому что часть уже была сделана при сборке `comment` и была закэширована.
 
