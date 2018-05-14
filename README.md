@@ -1,6 +1,31 @@
 # azorge_microservices
 #### Homework 19:
+- Создал новую вм с помощью docker-machine
 
+```
+docker-machine create --driver google \
+--google-project docker-200312 \
+--google-zone europe-west4-b \
+--google-machine-type n1-standard-1 \
+--google-disk-size 50 \
+--google-machine-image $(gcloud compute images list --filter ubuntu-1604-lts --uri) \
+docker-gitlab
+```
+ - Добавил фаервол правила для доступа в вм
+ - Поставил docker и docker-compose
+ - Спомощью  docker-compose.yml поставил gitlab-ci
+ - Настроил gitlab-ci: 
+ 	- Пользователя
+ 	- Группу
+ 	- Проект
+ 	- CI\CD pipeline
+ 	- Добавил, зарегистрировал и запустил runner
+
+ 	https://yadi.sk/i/WHQP1_8y3Vsn8k
+
+ *. Добавил нотификации из gitlab в slack
+
+ https://yadi.sk/i/Zw09N8RK3VsmKq
 
 
 #### Homework 17:
