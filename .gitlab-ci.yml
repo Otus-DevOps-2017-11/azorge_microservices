@@ -33,6 +33,6 @@ deploy_dev_job:
   stage: deploy
   script:
     - echo 'Deploy'
-    environment:
-      name: dev
-      url: http://dev.example.com
+  environment:
+    name: dev
+    url: http://dev.example.com
