@@ -1,4 +1,13 @@
 # azorge_microservices
+#### Homework 23:
+
+https://hub.docker.com/r/azorge/
+
+- Настоил cAdvisor для наблюдения за контейнерами
+- Настроил grafana для визуализации метрик
+- Алертинг в slack: https://yadi.sk/i/z1xGI7953VxB7E
+- Алертинг в prometheus: https://yadi.sk/i/KqmaHTh-3VxB9u
+
 #### Homework 21:
 
 Docker-hub: https://hub.docker.com/r/azorge/
