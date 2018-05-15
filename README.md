@@ -1,4 +1,12 @@
 # azorge_microservices
+#### Homework 21:
+
+Docker-hub: https://hub.docker.com/r/azorge/
+
+- Установил, запустил и настроил prometheus
+- Пересобрал образы микросервисов
+- Запустил и настроил сборку метрик и состояние микросервисов с использованием экспортера
+
 #### Homework 20:
 - В gitlab создал дополнительный проект
 - Настроил окружения dev, stage и production для CI\CD pipelines
