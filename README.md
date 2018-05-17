@@ -1,6 +1,54 @@
 # azorge_microservices
+#### Homework 21:
+
+Docker-hub: https://hub.docker.com/r/azorge/
+
+- Установил, запустил и настроил prometheus
+- Пересобрал образы микросервисов
+- Запустил и настроил сборку метрик и состояние микросервисов с использованием экспортера
+
+#### Homework 20:
+- В gitlab создал дополнительный проект
+- Настроил окружения dev, stage и production для CI\CD pipelines
+- Добавил параметр не позволяющий выкатывать код без тэга
+- Настрил определение динамического окружения для каждой ветки
+
+#### Homework 19:
+- Создал новую вм с помощью docker-machine
+
+```
+docker-machine create --driver google \
+--google-project docker-200312 \
+--google-zone europe-west4-b \
+--google-machine-type n1-standard-1 \
+--google-disk-size 50 \
+--google-machine-image $(gcloud compute images list --filter ubuntu-1604-lts --uri) \
+docker-gitlab
+```
+ - Добавил фаервол правила для доступа в вм
+ - Поставил docker и docker-compose
+ - Спомощью  docker-compose.yml поставил gitlab-ci
+ - Настроил gitlab-ci: 
+ 	- Пользователя
+ 	- Группу
+ 	- Проект
+ 	- CI\CD pipeline
+ 	- Добавил, зарегистрировал и запустил runner
+
+ 	https://yadi.sk/i/WHQP1_8y3Vsn8k
+
+ *. Добавил нотификации из gitlab в slack
+
+ https://yadi.sk/i/Zw09N8RK3VsmKq
+
+
+#### Homework 17:
+Работа с `networks` и `docker-compose`.
+
+Параметризация `docker-compose` через `.env` и создание `docker-compose.override.yml`
+
 #### Homework 16:
-Все предыдушее перенес в `docker-monolith`.
+Все предыдущее перенес в `docker-monolith`.
 
 *. Cборка ui началась не с первого шага потому что часть уже была сделана при сборке `comment` и была закэширована.
 
