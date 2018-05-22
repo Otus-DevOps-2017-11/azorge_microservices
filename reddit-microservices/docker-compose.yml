@@ -1,0 +1,54 @@
+version: '3.3'
+services:
+  post_db:
+    image: mongo:3.2
+    volumes:
+      - post_db:/data/db
+    networks:
+      back_net:
+        aliases:
+          - ${COMMENT_DATABASE_HOST}
+          - ${POST_DATABASE_HOST}
+
+  ui:
+    build: ./ui
+    image: ${USERNAME}/ui:${UI_VER}
+    ports:
+      - ${UI_PORT}:${UI_PORT}/tcp
+    networks:
+      front_net: 
+  post:
+    build: ./post-py
+    image: ${USERNAME}/post:${POST_VER}
+    networks:
+      front_net:
+        aliases:
+          - ${POST_SERVICE_HOST}
+      back_net: 
+  comment:
+    build: ./comment
+    image: ${USERNAME}/comment:${COMMENT_VER}
+    networks:
+      front_net:
+        aliases:
+          - ${COMMENT_SERVICE_HOST}
+      back_net: 
+
+volumes:
+  post_db:
+
+networks:
+  front_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: 10.0.1.0/24 
+  back_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: 10.0.2.0/24
