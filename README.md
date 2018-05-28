@@ -27,7 +27,6 @@ docker-gitlab
 
  https://yadi.sk/i/Zw09N8RK3VsmKq
 
-
 #### Homework 17:
 Работа с `networks` и `docker-compose`.
 
